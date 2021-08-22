@@ -1,0 +1,82 @@
+﻿@page
+@model TicTacToe.Pages.Deledit.IndexModel
+@{
+}
+
+<div class="container">
+    <h1>Delete Player/Game</h1>
+    <br />
+    <div class="row">
+        <div class="col-12">
+            <div class="dropdown">
+                <span>Choose A Player</span>
+                <a class="btn btn-secondary dropdown-toggle mb-2" href="#" role="button" id="dropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    All Players
+                </a>
+                <a id="delete-player" class="btn btn-danger text-white mb-2" style="cursor:pointer">
+                    Delete Current Player
+                </a>
+                <div id="all-players1" class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                </div>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Result</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody id="player-info"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <br />
+    <h1>Edit Player</h1>
+    <br />
+    <div class="row">
+        <div class="col-12">
+            <div class="dropdown">
+                <span>Choose A Player</span>
+                <a class="btn btn-secondary dropdown-toggle mb-2" href="#" role="button" id="dropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    All Players
+                </a>
+
+                <div id="all-players2" class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                </div>
+                <form onsubmit="editUser(event)">
+                    <div class="form-group row">
+                        <div class="col-2">
+                            <label for="p-name">User Name</label>
+                        </div>
+                        <div class="col-4">
+                            <input type="text" for="Player.Name" class="form-control" onchange="validate(this)" />
+                        </div>
+                        <span id="p-name" class="text-danger"></span>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-2">
+                            <label for="Player.Password">Password</label>
+                        </div>
+                        <div class="col-4">
+                            <input for="Player.Password" type="password" class="form-control" onchange="validate(this)" />
+                        </div>
+                        <span id="p-pwd" class="text-danger"></span>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-2 offset-2">
+                            <input type="submit" value="Update" class="btn btn-primary form-control" />
+                        </div>
+                        <div class="col-2">
+                            <a asp-page="/Index" class="btn btn-success form-control">Back</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <script src="~/js/Deledit.js"></script>
+}

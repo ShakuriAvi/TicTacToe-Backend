@@ -1,0 +1,48 @@
+﻿@page
+@model TicTacToe.Pages.Lists.IndexModel
+@{
+}
+
+<br />
+<div class="container row p-0 m-0">
+    <div class="col-9">
+        <h2 class="text-info">Players Table</h2>
+    </div>
+
+    <div class="col-12 border p-3 mt-3">
+        <table id="DT_load" class="table table-striped border" style="width:100%">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Wins</th>
+                    <th>Draws</th>
+                    <th>Loses</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+</div>
+
+<br />
+
+<div class="container row p-0 m-0">
+    <div class="col-9">
+        <h2 class="text-info">Games Table</h2>
+    </div>
+    <div class="col-12 border p-3 mt-3">
+        <table id="DT_games" class="table table-striped border" style="width:100%">
+            <thead>
+                <tr>
+                    <th>Player ID</th>
+                    <th>Date</th>
+                    <th>Result</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/js/Tables.js"></script>
+}
