@@ -1,5 +1,5 @@
 # TicTacToe-Backend
-TicTacToe game implemented by .net on c#. The client side implemented with Winform and backend side with ASP.NET Core.</br>
+TicTacToe game implemented by .net on c#. The client side implemented with Winforms and backend side with ASP.NET Core.</br>
 Link to Backend side: https://github.com/ShakuriAvi/TicTacToe-Client.</br>
 
 
